@@ -1,0 +1,7 @@
+Flask==2.0.1
+Pillow==8.2.0
+requests==2.25.1
+Werkzeug==2.0.1
+backoff==1.10.0
+Flask-Limiter==3.6.0
+Flask-HTTPAuth==4.8.0

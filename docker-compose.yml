@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  webapp:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/usr/src/app
+    environment:
+      - FLASK_APP=app.py
+      - FLASK_RUN_HOST=0.0.0.0
+    command: flask run
+    networks:
+      ollama_default:
+        aliases:
+          - ollama
+
+networks:
+  ollama_default:
+    external: true
